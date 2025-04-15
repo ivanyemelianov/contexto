@@ -13,6 +13,10 @@
       </button>
       <StoryList />
     </div>
+
+    <footer class="text-center mt-8 text-sm text-gray-500">
+      <p>App Version: {{ appVersion }}</p>
+    </footer>
   </div>
 </template>
 
@@ -25,6 +29,7 @@ import AuthForm from './components/AuthForm.vue'
 import StoryList from './components/StoryList.vue'
 
 const user = ref(null)
+const appVersion = 'V0.1'
 
 onMounted(() => {
   onAuthStateChanged(auth, (currentUser) => {
